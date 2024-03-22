@@ -6,7 +6,6 @@ class Solution:
         if len(nums) <= 1:
             return False
 
-        # Nums can be between -10^9 and 10^9 inclusive. A set is the most no-nonsense solution
         seen = set()
 
         for num in nums:

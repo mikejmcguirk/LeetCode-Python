@@ -3,11 +3,8 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        if len(s) == 1 and (s != t):
+        if len(s) == 1 and (s[0] != t[0]):
             return False
-
-        if s == t:
-            return True
 
         # Only lower-case english letters are possible. A hash-based solution is not needed
         letters = [0] * 26
