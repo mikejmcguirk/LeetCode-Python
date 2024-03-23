@@ -1,16 +1,17 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
+        length_s = len(s)
+
+        if length_s != len(t):
             return False
 
-        if len(s) == 1 and (s[0] != t[0]):
+        if length_s == 1 and (s[0] != t[0]):
             return False
 
-        # Only lower-case english letters are possible. A hash-based solution is not needed
         letters = [0] * 26
-        SUBTRACTOR = 97
+        SUBTRACTOR = ord("a")
 
-        for i in range(len(s)):
+        for i in range(length_s):
             s_char = ord(s[i]) - SUBTRACTOR
             t_char = ord(t[i]) - SUBTRACTOR
 
