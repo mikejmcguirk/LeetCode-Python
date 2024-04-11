@@ -1,17 +1,15 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        length_s = len(s)
-
-        if length_s != len(t):
+        if len(s) != len(t):
             return False
 
-        if length_s == 1 and (s[0] != t[0]):
+        if len(s) == 1 and (s[0] != t[0]):
             return False
 
         letters = [0] * 26
         SUBTRACTOR = ord("a")
 
-        for i in range(length_s):
+        for i in range(len(s)):
             s_char = ord(s[i]) - SUBTRACTOR
             t_char = ord(t[i]) - SUBTRACTOR
 
