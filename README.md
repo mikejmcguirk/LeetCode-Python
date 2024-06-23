@@ -1,1 +1,1 @@
-Python LeedCode solutions
+Python LeetCode solutions
